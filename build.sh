@@ -3,20 +3,20 @@
 echo Pulling Docker base images
 
 # For fxa-auth-db-mysql,fxa-auth-server,fxa-content-server,fxa-oauth-server,fxa-profile-server:
-docker pull node:0.10-slim
-docker build -t vladikoff/fxa-slim-image https://github.com/vladikoff/fxa-slim-image.git
+docker pull node:6.14.0-alpine
+docker build -t fionnb/fxa-slim-image https://github.com/fionnb/fxa-slim-image.git
 
 # For browserid-verifier:
-docker pull node:4.2.4
+# docker pull node:4.2.4
 
 # For syncserver:
-docker pull debian:7.4
+docker pull debian:jessie-slim
 
 # For syncserver:
-docker pull python:2.7
+docker pull python:2.7-slim
 
 # For fxa-self-hosting:
-docker pull nginx
+#docker pull nginx
 
 echo Building images...
 
@@ -28,4 +28,4 @@ docker build -t browserid-verifier https://github.com/mozilla/browserid-verifier
 docker build -f ./docs/self-host.docker -t fxa-profile-server https://github.com/mozilla/fxa-profile-server.git
 docker build -t syncserver https://github.com/mozilla-services/syncserver.git
 docker build -t syncto https://github.com/mozilla-services/syncto.git
-docker build -t fxa-self-hosting https://github.com/michielbdejong/fxa-self-hosting.git
+#docker build -t fxa-self-hosting https://github.com/michielbdejong/fxa-self-hosting.git
