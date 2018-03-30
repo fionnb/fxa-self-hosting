@@ -24,7 +24,7 @@ docker build -f ./docs/self-host.docker -t fxa-content-server https://github.com
 docker build -f ./docs/self-host.docker -t fxa-auth-server https://github.com/mozilla/fxa-auth-server.git
 docker build -f ./docs/self-host.docker -t fxa-auth-db-mysql https://github.com/mozilla/fxa-auth-db-mysql.git
 docker build -f ./docs/self-host.docker -t fxa-oauth-server https://github.com/mozilla/fxa-oauth-server.git
-docker build -t browserid-verifier https://github.com/mozilla/browserid-verifier.git#docker-improvements
+docker build -t browserid-verifier https://github.com/mozilla/browserid-verifier.git
 docker build -f ./docs/self-host.docker -t fxa-profile-server https://github.com/mozilla/fxa-profile-server.git
 docker build -t syncserver https://github.com/mozilla-services/syncserver.git
 docker build -t syncto https://github.com/mozilla-services/syncto.git
